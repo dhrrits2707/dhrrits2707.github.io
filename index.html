@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dhriti Shah | Fashion Marketing and Brand Strategy</title>
+<meta name="description" content="Portfolio of Dhriti Shah, Rutgers Business School student focused on social media, brand strategy, and PR in fashion and lifestyle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burgundy: #5A1226;
+    --burgundy-deep: #3E0B19;
+    --gold: #C9A45C;
+    --paper: #FBF8F6;
+    --ink: #2A1A1E;
+    --muted: #6E5A5F;
+    --line: #E4D8D6;
+    --display: "Bodoni Moda", "Didot", "Times New Roman", serif;
+    --body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    font-family: var(--body);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 1.0625rem;
+  }
+  a { color: inherit; }
+  a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+  /* Header and hero */
+  .hero {
+    background: var(--burgundy);
+    color: var(--paper);
+    padding: 1.5rem clamp(1.25rem, 6vw, 5rem) clamp(4rem, 10vw, 8rem);
+  }
+  nav { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  nav .mark { font-family: var(--display); font-size: 1.25rem; }
+  nav ul { list-style: none; display: flex; gap: 1.75rem; }
+  nav a { text-decoration: none; font-weight: 500; padding-bottom: 2px; border-bottom: 1px solid transparent; }
+  nav a:hover { border-bottom-color: var(--gold); }
+  .hero-body {
+    max-width: 72rem; margin-top: clamp(3rem, 8vw, 6rem);
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(12rem, 20rem); gap: clamp(2rem, 5vw, 4rem); align-items: end;
+  }
+  .headshot { width: 100%; height: auto; display: block; border: 3px solid var(--gold); border-radius: 2px; aspect-ratio: 4 / 5; object-fit: cover; }
+  @media (max-width: 760px) {
+    .hero-body { grid-template-columns: 1fr; }
+    .headshot { max-width: 16rem; order: -1; }
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(3.25rem, 10vw, 8rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 em { font-style: italic; font-weight: 500; color: var(--gold); }
+  .statement {
+    margin-top: 2rem;
+    max-width: 40rem;
+    font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+    line-height: 1.45;
+    color: #F1E4E1;
+  }
+
+  /* Sections */
+  main { padding: 0 clamp(1.25rem, 6vw, 5rem); }
+  section { padding: clamp(3.5rem, 8vw, 6rem) 0; border-bottom: 1px solid var(--line); max-width: 62rem; }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--burgundy);
+    margin-bottom: 2rem;
+  }
+
+  /* Skills */
+  .skill-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 2.25rem 3rem; }
+  .skill-groups h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--burgundy-deep); }
+  .skill-groups ul { list-style: none; }
+  .skill-groups li { padding: 0.4rem 0; border-top: 1px solid var(--line); }
+  .skill-groups li:last-child { border-bottom: 1px solid var(--line); }
+
+  /* Projects */
+  .project { padding: 2rem 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+  .project:first-of-type { border-top: none; padding-top: 0; }
+  .project h3 { font-family: var(--display); font-weight: 500; font-size: 1.6rem; color: var(--ink); }
+  .project .role { color: var(--muted); font-size: 0.95rem; }
+  .project p { max-width: 42rem; }
+  .result {
+    display: inline-block;
+    margin-top: 0.25rem;
+    padding: 0.35rem 0.75rem;
+    background: var(--burgundy);
+    color: var(--paper);
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 2px;
+    width: fit-content;
+  }
+  .tools { color: var(--muted); font-size: 0.95rem; }
+  .links { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.25rem; }
+  .links a {
+    padding: 0.45rem 1rem; border: 1.5px solid var(--burgundy); color: var(--burgundy);
+    text-decoration: none; font-weight: 600; font-size: 0.95rem; border-radius: 2px;
+  }
+  .links a:hover { background: var(--burgundy); color: var(--paper); }
+  footer a { color: var(--gold); }
+
+  footer {
+    background: var(--burgundy-deep);
+    color: #E9D9D5;
+    padding: 2.5rem clamp(1.25rem, 6vw, 5rem);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 560px) {
+    nav ul { gap: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <nav aria-label="Main">
+    <span class="mark">DS</span>
+    <ul>
+      <li><a href="#statement">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+  <div class="hero-body" id="statement">
+    <div>
+      <h1>Dhriti <em>Shah</em></h1>
+      <p class="statement">I am a Rutgers student studying Business Analytics and Information Technology and Marketing, building fashion and lifestyle brand stories through social content, influencer outreach, and editorial strategy.</p>
+    </div>
+    <img class="headshot" src="headshot.jpg" alt="Portrait of Dhriti Shah" width="720" height="900">
+  </div>
+</header>
+
+<main>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-groups">
+      <div>
+        <h3>Content and social</h3>
+        <ul>
+          <li>Instagram, TikTok, and Pinterest strategy</li>
+          <li>Editorial caption and blurb writing</li>
+          <li>Short form video editing</li>
+          <li>Content calendars and campaign planning</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Brand and PR</h3>
+        <ul>
+          <li>Influencer and press outreach</li>
+          <li>Brand partnerships</li>
+          <li>Brand positioning and go-to-market plans</li>
+          <li>Event and showroom operations</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tools and analytics</h3>
+        <ul>
+          <li>Canva, Photoshop, Figma, CapCut</li>
+          <li>Excel and Google Analytics</li>
+          <li>Airtable and Shopify</li>
+          <li>PowerPoint and ChatGPT</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Languages</h3>
+        <ul>
+          <li>English</li>
+          <li>Hindi</li>
+          <li>Gujarati</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <article class="project">
+      <h3>Fashion Organization of Retail and Marketing Business Case Competition</h3>
+      <span class="role">Winning team, retail strategy for Seb's Second Stitch</span>
+      <p>Built a retail strategy for an upcycled fashion brand, combining consumer research, financial modeling, and brand positioning into a recommendation for the judges.</p>
+      <span class="result">Won the competition with a $600K retail plan</span>
+      <span class="tools">Hosted by the Fashion Organization of Retail and Marketing at Rutgers Business School</span>
+      <div class="links"><a href="https://canva.link/7psbvh5cvjeoy1c" target="_blank" rel="noopener">View the case on Canva</a></div>
+    </article>
+
+    <article class="project">
+      <h3>PhotoBook Magazine Instagram Growth</h3>
+      <span class="role">Social Media Intern</span>
+      <p>Planned and produced carousels, captions, and a tiered two month engagement strategy tied to the magazine's focus on sustainability, diversity, and well-being. Also launched the magazine's LTK shop and wrote a social commerce report comparing LTK, ShopMy, and the Amazon Influencer Program.</p>
+      <span class="result">Grew monthly views from 120K to 1M+ at a 4.2% engagement rate</span>
+      <div class="links"><a href="https://www.instagram.com/photobookmagazine/" target="_blank" rel="noopener">View on Instagram</a></div>
+    </article>
+
+    <article class="project">
+      <h3>Summer Fridays x UGG Pitch Deck</h3>
+      <span class="role">Solo mock brand collaboration pitch</span>
+      <p>Designed a full pitch deck proposing a co-branded partnership, covering audience overlap, campaign concept, and creative direction in a consistent visual system.</p>
+      <span class="tools">Built in Canva</span>
+      <div class="links"><a href="https://canva.link/5n3cka9crwst57l" target="_blank" rel="noopener">View the deck on Canva</a></div>
+    </article>
+
+    <article class="project">
+      <h3>Digital Costume Archive</h3>
+      <span class="role">Rutgers Business School</span>
+      <p>Built and manage a digital archive in Airtable that classifies garments by fabric, construction, and period, with visual records and barcode tagging that mirror retail cataloging and merchandising workflows.</p>
+      <span class="tools">Built in Airtable</span>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <span>Dhriti Shah</span>
+  <span>Rutgers Business School, Class of 2029</span>
+  <a href="mailto:dss286@scarletmail.rutgers.edu">dss286@scarletmail.rutgers.edu</a>
+</footer>
+
+</body>
+</html>
